@@ -1,0 +1,59 @@
+############ Country Modifiers ############
+cheat_forcelimit_modifier = {
+	naval_forcelimit_modifier = 100.00
+	land_forcelimit_modifier = 100.00
+}
+
+cheat_tech_research_modifier = {
+	technology_cost = -1000.0
+}
+
+cheat_envoys_modifier = {
+	merchants = 10
+	diplomats = 10
+	missionaries = 10
+	#colonists = 10
+}
+
+cheat_colonists_modifier = {
+	colonists = 10
+}
+
+cheat_diplomatic_rep_modifier = {
+	diplomatic_reputation = 100
+}
+
+cheat_combat_effectiveness_modifier = {
+	army_tradition_decay = -10
+	discipline = 10
+	hostile_attrition = 10
+	land_attrition = -10
+	land_morale = 10
+	artillery_power = 10
+	cavalry_power = 10
+	infantry_power = 10
+	recover_army_morale_speed = 10
+	reinforce_speed = 10
+	
+	blocade_efficiency = 10
+	galley_power = 10
+	heavy_ship_power = 10
+	leader_naval_maneuver = 10
+	light_ship_power = 10
+	naval_attrition = -10
+	naval_morale = 10
+	navy_tradition_decay = -10
+	recover_navy_morale_speed = 10
+	transport_power = 10
+}
+
+############ Province Modifiers ############
+cheat_recruit_time_modifier = {
+	regiment_recruit_speed = -100
+	ship_recruit_speed = -100
+}
+
+cheat_provincial_development_modifier = {
+	allowed_num_of_buildings = 20
+	local_development_cost = -100
+}
