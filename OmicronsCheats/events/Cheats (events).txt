@@ -2,1166 +2,1166 @@ namespace = auto_cheat
 
 # Money event
 country_event = {
-	id = auto_cheat.1
-	title = auto_cheat.1.title
-	desc = auto_cheat.1.desc
-	picture = ECONOMY_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		NOT = {
-			treasury = 10000
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		add_treasury = 999999
-	}
-	
-	option = {
-		name = auto_cheat.1.a
-	}
+    id = auto_cheat.1
+    title = auto_cheat.1.title
+    desc = auto_cheat.1.desc
+    picture = ECONOMY_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        NOT = {
+            treasury = 10000
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        add_treasury = 999999
+    }
+    
+    option = {
+        name = auto_cheat.1.a
+    }
 }
 
 # Tech points event
 country_event = {
-	id = auto_cheat.2
-	title = auto_cheat.2.title
-	desc = auto_cheat.2.desc
-	picture = INVENTION_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		OR = {
-			NOT = { adm_power = 300 }
-			NOT = { dip_power = 300 }
-			NOT = { mil_power = 300 }
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		add_adm_power = 10000
-		add_dip_power = 10000
-		add_mil_power = 10000
-	}
-	
-	option = {
-		name = auto_cheat.2.a
-	}
+    id = auto_cheat.2
+    title = auto_cheat.2.title
+    desc = auto_cheat.2.desc
+    picture = INVENTION_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        OR = {
+            NOT = { adm_power = 300 }
+            NOT = { dip_power = 300 }
+            NOT = { mil_power = 300 }
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        add_adm_power = 10000
+        add_dip_power = 10000
+        add_mil_power = 10000
+    }
+    
+    option = {
+        name = auto_cheat.2.a
+    }
 }
 
 # Manpower event (disabled for AI to prevent sluggish mid to late game)
 country_event = {
-	id = auto_cheat.3
-	title = auto_cheat.3.title
-	desc = auto_cheat.3.desc
-	picture = MILITARY_CAMP_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		ai = no
-		NOT = {
-			manpower = 100
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		add_manpower = 5000
-	}
-	
-	option = {
-		name = auto_cheat.3.a
-	}
+    id = auto_cheat.3
+    title = auto_cheat.3.title
+    desc = auto_cheat.3.desc
+    picture = MILITARY_CAMP_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        ai = no
+        NOT = {
+            manpower = 100
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        add_manpower = 5000
+    }
+    
+    option = {
+        name = auto_cheat.3.a
+    }
 }
 
 # Forcelimit event (disabled for AI to prevent sluggish mid to late game)
 country_event = {
-	id = auto_cheat.4
-	title = auto_cheat.4.title
-	desc = auto_cheat.4.desc
-	picture = LAND_MILITARY_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		ai = no
-		NOT = {
-			has_country_flag = cheat_forcelimit_used
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		add_country_modifier = {
-			name = "cheat_forcelimit_modifier"
-			duration = -1
-		}
-		set_country_flag = cheat_forcelimit_used
-	}
-	
-	option = {
-		name = auto_cheat.4.a
-	}
+    id = auto_cheat.4
+    title = auto_cheat.4.title
+    desc = auto_cheat.4.desc
+    picture = LAND_MILITARY_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        ai = no
+        NOT = {
+            has_country_flag = cheat_forcelimit_used
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        add_country_modifier = {
+            name = "cheat_forcelimit_modifier"
+            duration = -1
+        }
+        set_country_flag = cheat_forcelimit_used
+    }
+    
+    option = {
+        name = auto_cheat.4.a
+    }
 }
 
 # Westernize event (automatic)
 country_event = {
-	id = auto_cheat.5
-	title = auto_cheat.5.title
-	desc = auto_cheat.5.desc
-	picture = WESTERNISATION_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		NOT = {
-			technology_group = western
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		change_technology_group = western
-	}
-	
-	option = {
-		name = auto_cheat.5.a
-		ai_chance = { factor = 0 }
-		
-		change_unit_type = western
-	}
-	
-	option = {
-		name = auto_cheat.5.b
-		ai_chance = { factor = 100 }
-	}
+    id = auto_cheat.5
+    title = auto_cheat.5.title
+    desc = auto_cheat.5.desc
+    picture = WESTERNISATION_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        NOT = {
+            technology_group = western
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        change_technology_group = western
+    }
+    
+    option = {
+        name = auto_cheat.5.a
+        ai_chance = { factor = 0 }
+        
+        change_unit_type = western
+    }
+    
+    option = {
+        name = auto_cheat.5.b
+        ai_chance = { factor = 100 }
+    }
 }
 
 # Tech research event
 country_event = {
-	id = auto_cheat.6
-	title = auto_cheat.6.title
-	desc = auto_cheat.6.desc
-	picture = INVENTION_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		NOT = {
-			has_country_flag = cheat_tech_research_used
-		}
-		OR = {
-			NOT = { adm_tech = 32 }
-			NOT = { dip_tech = 32 }
-			NOT = { mil_tech = 32 }
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		add_country_modifier = {
-			name = "cheat_tech_research_modifier"
-			duration = -1
-		}
-		set_country_flag = cheat_tech_research_used
-	}
-	
-	option = {
-		name = auto_cheat.6.a
-	}
+    id = auto_cheat.6
+    title = auto_cheat.6.title
+    desc = auto_cheat.6.desc
+    picture = INVENTION_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        NOT = {
+            has_country_flag = cheat_tech_research_used
+        }
+        OR = {
+            NOT = { adm_tech = 32 }
+            NOT = { dip_tech = 32 }
+            NOT = { mil_tech = 32 }
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        add_country_modifier = {
+            name = "cheat_tech_research_modifier"
+            duration = -1
+        }
+        set_country_flag = cheat_tech_research_used
+    }
+    
+    option = {
+        name = auto_cheat.6.a
+    }
 }
 
 # Recruit time event
 province_event = {
-	id = auto_cheat.7
-	title = auto_cheat.7.title
-	desc = auto_cheat.7.desc
-	picture = MILITARY_CAMP_eventPicture
-	
-	trigger = {
-		owner = {
-			has_country_flag = auto_cheating
-		}
-		NOT = {
-			has_province_flag = cheat_recruit_time_used
-		}
-		is_core = ROOT
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			owner = {
-				every_owned_province = {
-					limit = {
-						NOT = {
-							has_province_flag = cheat_recruit_time_used
-						}
-						is_core = ROOT
-					}
-					add_province_modifier = {
-						name = "cheat_recruit_time_modifier"
-						duration = -1
-					}
-					set_province_flag = cheat_recruit_time_used
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = auto_cheat.7.a
-	}
+    id = auto_cheat.7
+    title = auto_cheat.7.title
+    desc = auto_cheat.7.desc
+    picture = MILITARY_CAMP_eventPicture
+    
+    trigger = {
+        owner = {
+            has_country_flag = auto_cheating
+        }
+        NOT = {
+            has_province_flag = cheat_recruit_time_used
+        }
+        is_core = ROOT
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            owner = {
+                every_owned_province = {
+                    limit = {
+                        NOT = {
+                            has_province_flag = cheat_recruit_time_used
+                        }
+                        is_core = ROOT
+                    }
+                    add_province_modifier = {
+                        name = "cheat_recruit_time_modifier"
+                        duration = -1
+                    }
+                    set_province_flag = cheat_recruit_time_used
+                }
+            }
+        }
+    }
+    
+    option = {
+        name = auto_cheat.7.a
+    }
 }
 
 # Build everything event
 province_event = {
-	id = auto_cheat.8
-	title = auto_cheat.8.title
-	desc = auto_cheat.8.desc
-	picture = CITY_DEVELOPMENT_eventPicture
-	
-	trigger = {
-		owner = {
-			has_country_flag = auto_cheating
-		}
-		OR = {
-			NOT = { has_building = tradecompany }
-			NOT = { has_building = plantations }
-			NOT = { has_building = textile }
-			NOT = { has_building = weapons }
-			NOT = { has_building = wharf }
-		}
-		NOT = {
-			has_building = town_hall
-			has_building = university
-			has_building = training_fields
-			has_building = conscription_center
-			has_building = grand_shipyard
-			has_building = drydock
-			has_building = counting_house
-			has_building = stock_exchange
-			has_building = cathedral
-			has_building = fort_18th
-		}
-		is_core = ROOT
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			owner = {
-				every_owned_province = {
-					limit = {
-						OR = {
-							NOT = { has_building = tradecompany }
-							NOT = { has_building = plantations }
-							NOT = { has_building = textile }
-							NOT = { has_building = weapons }
-							NOT = { has_building = wharf }
-						}
-						NOT = {
-							has_building = town_hall
-							has_building = university
-							has_building = training_fields
-							has_building = conscription_center
-							has_building = grand_shipyard
-							has_building = drydock
-							has_building = counting_house
-							has_building = stock_exchange
-							has_building = cathedral
-							has_building = fort_18th
-						}
-						is_core = owner
-					}
-					if = {
-						limit = {
-							OR = {
-								NOT = { has_building = tradecompany }
-								NOT = { has_building = plantations }
-								NOT = { has_building = textile }
-								NOT = { has_building = weapons }
-								NOT = { has_building = wharf }
-							}
-						}
-						add_building = tradecompany
-						add_building = plantations
-						add_building = textile
-						add_building = weapons
-						add_building = wharf
-					}
-					
-					# Government buildings
-					add_building = town_hall
-					add_building = university
-					
-					# Army buildings
-					add_building = training_fields
-					add_building = conscription_center
-					
-					# Navy buildings
-					add_building = grand_shipyard
-					add_building = drydock
-					
-					# Production buildings
-					add_building = counting_house
-					
-					# Trade buildings
-					add_building = stock_exchange
-					
-					# Taxation buildings
-					add_building = cathedral
-					
-					# Fort buildings
-					add_building = fort_18th
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = auto_cheat.8.a
-	}
+    id = auto_cheat.8
+    title = auto_cheat.8.title
+    desc = auto_cheat.8.desc
+    picture = CITY_DEVELOPMENT_eventPicture
+    
+    trigger = {
+        owner = {
+            has_country_flag = auto_cheating
+        }
+        OR = {
+            NOT = { has_building = tradecompany }
+            NOT = { has_building = plantations }
+            NOT = { has_building = textile }
+            NOT = { has_building = weapons }
+            NOT = { has_building = wharf }
+        }
+        NOT = {
+            has_building = town_hall
+            has_building = university
+            has_building = training_fields
+            has_building = conscription_center
+            has_building = grand_shipyard
+            has_building = drydock
+            has_building = counting_house
+            has_building = stock_exchange
+            has_building = cathedral
+            has_building = fort_18th
+        }
+        is_core = ROOT
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            owner = {
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            NOT = { has_building = tradecompany }
+                            NOT = { has_building = plantations }
+                            NOT = { has_building = textile }
+                            NOT = { has_building = weapons }
+                            NOT = { has_building = wharf }
+                        }
+                        NOT = {
+                            has_building = town_hall
+                            has_building = university
+                            has_building = training_fields
+                            has_building = conscription_center
+                            has_building = grand_shipyard
+                            has_building = drydock
+                            has_building = counting_house
+                            has_building = stock_exchange
+                            has_building = cathedral
+                            has_building = fort_18th
+                        }
+                        is_core = owner
+                    }
+                    if = {
+                        limit = {
+                            OR = {
+                                NOT = { has_building = tradecompany }
+                                NOT = { has_building = plantations }
+                                NOT = { has_building = textile }
+                                NOT = { has_building = weapons }
+                                NOT = { has_building = wharf }
+                            }
+                        }
+                        add_building = tradecompany
+                        add_building = plantations
+                        add_building = textile
+                        add_building = weapons
+                        add_building = wharf
+                    }
+                    
+                    # Government buildings
+                    add_building = town_hall
+                    add_building = university
+                    
+                    # Army buildings
+                    add_building = training_fields
+                    add_building = conscription_center
+                    
+                    # Navy buildings
+                    add_building = grand_shipyard
+                    add_building = drydock
+                    
+                    # Production buildings
+                    add_building = counting_house
+                    
+                    # Trade buildings
+                    add_building = stock_exchange
+                    
+                    # Taxation buildings
+                    add_building = cathedral
+                    
+                    # Fort buildings
+                    add_building = fort_18th
+                }
+            }
+        }
+    }
+    
+    option = {
+        name = auto_cheat.8.a
+    }
 }
 
 # Government change event (manual, triggered from decision)
 country_event = {
-	id = auto_cheat.9
-	title = auto_cheat.9.title
-	desc = auto_cheat.9.desc
-	picture = COURT_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = auto_cheat.9.a
-		
-		change_government = constitutional_monarchy
-	}
-	
-	option = {
-		name = auto_cheat.9.b
-		
-		change_government = constitutional_republic
-	}
-	
-	option = {
-		name = auto_cheat.9.c
-		
-		change_government = monastic_order_government
-	}
-	
-	option = {
-		name = auto_cheat.9.d
-		
-		change_government = theocratic_government
-	}
-	
-	option = {
-		name = auto_cheat.9.e
-		
-		change_government = steppe_horde
-	}
-	
-	option = {
-		name = auto_cheat.9.f
-		
-		change_government = tribal_federation
-	}
-	
-	option = {
-		name = auto_cheat.9.g
-		
-		change_government = tribal_democracy
-	}
-	
-	option = {
-		name = auto_cheat.9.h
-		
-		change_government = elective_monarchy		
-	}
-	
-	option = {
-		name = auto_cheat.9.i
-		
-		change_government = ambrosian_republic
-	}
-	
-	option = {
-		name = auto_cheat.9.j
-		
-		change_government = dutch_republic
-	}
-	
-	option = {
-		name = auto_cheat.9.k
-		
-		change_government = english_monarchy
-	}
-	
-	option = {
-		name = auto_cheat.9.l
-		
-		change_government = celestial_empire
-	}
-	
-	option = {
-		name = auto_cheat.9.m
-		
-		change_government = iqta
-	}
-	
-	option = {
-		name = auto_cheat.9.n
-		
-		change_government = shogunate
-		every_country = {
-			limit = {
-				is_subject_of = ROOT
-				is_colonial_nation = no
-				is_lesser_in_union = no
-			}
-			change_government = daimyo
-		}
-	}
+    id = auto_cheat.9
+    title = auto_cheat.9.title
+    desc = auto_cheat.9.desc
+    picture = COURT_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = auto_cheat.9.a
+        
+        change_government = constitutional_monarchy
+    }
+    
+    option = {
+        name = auto_cheat.9.b
+        
+        change_government = constitutional_republic
+    }
+    
+    option = {
+        name = auto_cheat.9.c
+        
+        change_government = monastic_order_government
+    }
+    
+    option = {
+        name = auto_cheat.9.d
+        
+        change_government = theocratic_government
+    }
+    
+    option = {
+        name = auto_cheat.9.e
+        
+        change_government = steppe_horde
+    }
+    
+    option = {
+        name = auto_cheat.9.f
+        
+        change_government = tribal_federation
+    }
+    
+    option = {
+        name = auto_cheat.9.g
+        
+        change_government = tribal_democracy
+    }
+    
+    option = {
+        name = auto_cheat.9.h
+        
+        change_government = elective_monarchy       
+    }
+    
+    option = {
+        name = auto_cheat.9.i
+        
+        change_government = ambrosian_republic
+    }
+    
+    option = {
+        name = auto_cheat.9.j
+        
+        change_government = dutch_republic
+    }
+    
+    option = {
+        name = auto_cheat.9.k
+        
+        change_government = english_monarchy
+    }
+    
+    option = {
+        name = auto_cheat.9.l
+        
+        change_government = celestial_empire
+    }
+    
+    option = {
+        name = auto_cheat.9.m
+        
+        change_government = iqta
+    }
+    
+    option = {
+        name = auto_cheat.9.n
+        
+        change_government = shogunate
+        every_country = {
+            limit = {
+                is_subject_of = ROOT
+                is_colonial_nation = no
+                is_lesser_in_union = no
+            }
+            change_government = daimyo
+        }
+    }
 }
 
 # Government change event (automatic)
 country_event = {
-	id = auto_cheat.10
-	title = auto_cheat.10.title
-	desc = auto_cheat.10.desc
-	picture = COURT_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		is_colonial_nation = no
-		NOT = { has_country_flag = gov_change_auto_used }
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_country_flag = gov_change_auto_used
-		}
-	}
-	
-	option = {
-		name = auto_cheat.10.a
-		ai_chance = { factor = 65 }
-		
-		change_government = constitutional_monarchy
-	}
-	
-	option = {
-		name = auto_cheat.10.b
-		ai_chance = { factor = 25 }
-		
-		change_government = constitutional_republic
-	}
-	
-	option = {
-		name = auto_cheat.10.c
-		ai_chance = { factor = 0 }
-		
-		change_government = monastic_order_government
-	}
-	
-	option = {
-		name = auto_cheat.10.d
-		ai_chance = { factor = 10 }
-		
-		change_government = theocratic_government
-	}
-	
-	option = {
-		name = auto_cheat.10.e
-		ai_chance = { factor = 0 }
-		
-		change_government = steppe_horde
-	}
-	
-	option = {
-		name = auto_cheat.10.f
-		ai_chance = { factor = 0 }
-		
-		change_government = tribal_federation
-	}
-	
-	option = {
-		name = auto_cheat.10.g
-		ai_chance = { factor = 0 }
-		
-		change_government = tribal_democracy
-	}
-	
-	option = {
-		name = auto_cheat.10.h
-		ai_chance = { factor = 0 }
-		
-		change_government = elective_monarchy		
-	}
-	
-	option = {
-		name = auto_cheat.10.i
-		ai_chance = { factor = 0 }
-		
-		change_government = ambrosian_republic
-	}
-	
-	option = {
-		name = auto_cheat.10.j
-		ai_chance = { factor = 0 }
-		
-		change_government = dutch_republic
-	}
-	
-	option = {
-		name = auto_cheat.10.k
-		ai_chance = { factor = 0 }
-		
-		change_government = english_monarchy
-	}
-	
-	option = {
-		name = auto_cheat.10.l
-		ai_chance = { factor = 0 }
-		
-		change_government = celestial_empire
-	}
-	
-	option = {
-		name = auto_cheat.10.m
-		ai_chance = { factor = 0 }
-		
-		change_government = iqta
-	}
-	
-	option = {
-		name = auto_cheat.10.n
-		ai_chance = { factor = 0 }
-		
-		change_government = shogunate
-		every_country = {
-			limit = {
-				is_subject_of = ROOT
-				is_colonial_nation = no
-				is_lesser_in_union = no
-			}
-			change_government = daimyo
-		}
-	}
+    id = auto_cheat.10
+    title = auto_cheat.10.title
+    desc = auto_cheat.10.desc
+    picture = COURT_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        is_colonial_nation = no
+        NOT = { has_country_flag = gov_change_auto_used }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = gov_change_auto_used
+        }
+    }
+    
+    option = {
+        name = auto_cheat.10.a
+        ai_chance = { factor = 65 }
+        
+        change_government = constitutional_monarchy
+    }
+    
+    option = {
+        name = auto_cheat.10.b
+        ai_chance = { factor = 25 }
+        
+        change_government = constitutional_republic
+    }
+    
+    option = {
+        name = auto_cheat.10.c
+        ai_chance = { factor = 0 }
+        
+        change_government = monastic_order_government
+    }
+    
+    option = {
+        name = auto_cheat.10.d
+        ai_chance = { factor = 10 }
+        
+        change_government = theocratic_government
+    }
+    
+    option = {
+        name = auto_cheat.10.e
+        ai_chance = { factor = 0 }
+        
+        change_government = steppe_horde
+    }
+    
+    option = {
+        name = auto_cheat.10.f
+        ai_chance = { factor = 0 }
+        
+        change_government = tribal_federation
+    }
+    
+    option = {
+        name = auto_cheat.10.g
+        ai_chance = { factor = 0 }
+        
+        change_government = tribal_democracy
+    }
+    
+    option = {
+        name = auto_cheat.10.h
+        ai_chance = { factor = 0 }
+        
+        change_government = elective_monarchy       
+    }
+    
+    option = {
+        name = auto_cheat.10.i
+        ai_chance = { factor = 0 }
+        
+        change_government = ambrosian_republic
+    }
+    
+    option = {
+        name = auto_cheat.10.j
+        ai_chance = { factor = 0 }
+        
+        change_government = dutch_republic
+    }
+    
+    option = {
+        name = auto_cheat.10.k
+        ai_chance = { factor = 0 }
+        
+        change_government = english_monarchy
+    }
+    
+    option = {
+        name = auto_cheat.10.l
+        ai_chance = { factor = 0 }
+        
+        change_government = celestial_empire
+    }
+    
+    option = {
+        name = auto_cheat.10.m
+        ai_chance = { factor = 0 }
+        
+        change_government = iqta
+    }
+    
+    option = {
+        name = auto_cheat.10.n
+        ai_chance = { factor = 0 }
+        
+        change_government = shogunate
+        every_country = {
+            limit = {
+                is_subject_of = ROOT
+                is_colonial_nation = no
+                is_lesser_in_union = no
+            }
+            change_government = daimyo
+        }
+    }
 }
 
 # Automatic cheating for colonies enabled
 country_event = {
-	id = auto_cheat.11
-	title = auto_cheat.11.title
-	desc = auto_cheat.11.desc
-	picture = INVENTION_eventPicture
-	
-	trigger = {
-		is_colonial_nation = yes
-		colonial_parent = {
-			has_country_flag = auto_cheating_colonies
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_country_flag = auto_cheating
-		}
-	}
-	
-	option = {
-		name = auto_cheat.11.a
-	}
+    id = auto_cheat.11
+    title = auto_cheat.11.title
+    desc = auto_cheat.11.desc
+    picture = INVENTION_eventPicture
+    
+    trigger = {
+        is_colonial_nation = yes
+        colonial_parent = {
+            has_country_flag = auto_cheating_colonies
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            set_country_flag = auto_cheating
+        }
+    }
+    
+    option = {
+        name = auto_cheat.11.a
+    }
 }
 
 # Automatic cheating for colonies disabled
 country_event = {
-	id = auto_cheat.12
-	title = auto_cheat.12.title
-	desc = auto_cheat.12.desc
-	picture = INVENTION_eventPicture
-	
-	trigger = {
-		is_colonial_nation = yes
-		has_country_flag = auto_cheating
-		colonial_parent = {
-			NOT = { has_country_flag = auto_cheating_colonies }
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			clr_country_flag = auto_cheating
-		}
-	}
-	
-	option = {
-		name = auto_cheat.12.a
-	}
+    id = auto_cheat.12
+    title = auto_cheat.12.title
+    desc = auto_cheat.12.desc
+    picture = INVENTION_eventPicture
+    
+    trigger = {
+        is_colonial_nation = yes
+        has_country_flag = auto_cheating
+        colonial_parent = {
+            NOT = { has_country_flag = auto_cheating_colonies }
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            clr_country_flag = auto_cheating
+        }
+    }
+    
+    option = {
+        name = auto_cheat.12.a
+    }
 }
 
 # Add envoys event
 country_event = {
-	id = auto_cheat.13
-	title = auto_cheat.13.title
-	desc = auto_cheat.13.desc
-	picture = ADVISOR_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		NOT = {
-			has_country_flag = cheat_add_envoys_used
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		add_country_modifier = {
-			name = "cheat_envoys_modifier"
-			duration = -1
-		}
-		set_country_flag = cheat_add_envoys_used
-	}
-	
-	option = {
-		name = auto_cheat.13.a
-	}
+    id = auto_cheat.13
+    title = auto_cheat.13.title
+    desc = auto_cheat.13.desc
+    picture = ADVISOR_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        NOT = {
+            has_country_flag = cheat_add_envoys_used
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        add_country_modifier = {
+            name = "cheat_envoys_modifier"
+            duration = -1
+        }
+        set_country_flag = cheat_add_envoys_used
+    }
+    
+    option = {
+        name = auto_cheat.13.a
+    }
 }
 
 # Westernize event (manual, triggered from decision)
 country_event = {
-	id = auto_cheat.14
-	title = auto_cheat.14.title
-	desc = auto_cheat.14.desc
-	picture = WESTERNISATION_eventPicture
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		change_technology_group = western
-	}
-	
-	option = {
-		name = auto_cheat.14.a
-		
-		change_unit_type = western
-	}
-	
-	option = {
-		name = auto_cheat.14.b
-	}
+    id = auto_cheat.14
+    title = auto_cheat.14.title
+    desc = auto_cheat.14.desc
+    picture = WESTERNISATION_eventPicture
+    
+    is_triggered_only = yes
+    
+    immediate = {
+        change_technology_group = western
+    }
+    
+    option = {
+        name = auto_cheat.14.a
+        
+        change_unit_type = western
+    }
+    
+    option = {
+        name = auto_cheat.14.b
+    }
 }
 
 # Forcelimit remove event (removes the modifier from any AI that might have it)
 country_event = {
-	id = auto_cheat.15
-	title = auto_cheat.15.title
-	desc = auto_cheat.15.desc
-	picture = LAND_MILITARY_eventPicture
-	
-	trigger = {
-		ai = yes
-		has_country_flag = cheat_forcelimit_used
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		clr_country_flag = cheat_forcelimit_used
-		remove_country_modifier = cheat_forcelimit_modifier
-	}
-	
-	option = {
-		name = auto_cheat.15.a
-	}
+    id = auto_cheat.15
+    title = auto_cheat.15.title
+    desc = auto_cheat.15.desc
+    picture = LAND_MILITARY_eventPicture
+    
+    trigger = {
+        ai = yes
+        has_country_flag = cheat_forcelimit_used
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        clr_country_flag = cheat_forcelimit_used
+        remove_country_modifier = cheat_forcelimit_modifier
+    }
+    
+    option = {
+        name = auto_cheat.15.a
+    }
 }
 
 # Add cores event
 province_event = {
-	id = auto_cheat.16
-	title = auto_cheat.16.title
-	desc = auto_cheat.16.desc
-	picture = FORT_eventPicture
-	
-	trigger = {
-		owner = {
-			has_country_flag = auto_cheating
-		}
-		NOT = {
-			is_core = ROOT
-		}
-		is_colony = no
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			owner = {
-				every_owned_province = {
-					limit = {
-						NOT = {
-							is_core = ROOT
-						}
-						is_colony = no
-					}
-					add_core = ROOT
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = auto_cheat.16.a
-	}
+    id = auto_cheat.16
+    title = auto_cheat.16.title
+    desc = auto_cheat.16.desc
+    picture = FORT_eventPicture
+    
+    trigger = {
+        owner = {
+            has_country_flag = auto_cheating
+        }
+        NOT = {
+            is_core = ROOT
+        }
+        is_colony = no
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            owner = {
+                every_owned_province = {
+                    limit = {
+                        NOT = {
+                            is_core = ROOT
+                        }
+                        is_colony = no
+                    }
+                    add_core = ROOT
+                }
+            }
+        }
+    }
+    
+    option = {
+        name = auto_cheat.16.a
+    }
 }
 
 # Convert to religion event
 province_event = {
-	id = auto_cheat.17
-	title = auto_cheat.17.title
-	desc = auto_cheat.17.desc
-	picture = RELIGIOUS_CONVERSION_eventPicture
-	
-	trigger = {
-		owner = {
-			has_country_flag = auto_cheating
-		}
-		has_owner_religion = no
-		is_core = ROOT
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			owner = {
-				every_owned_province = {
-					limit = {
-						has_owner_religion = no
-						is_core = ROOT
-					}
-					change_religion = ROOT
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = auto_cheat.17.a
-	}
+    id = auto_cheat.17
+    title = auto_cheat.17.title
+    desc = auto_cheat.17.desc
+    picture = RELIGIOUS_CONVERSION_eventPicture
+    
+    trigger = {
+        owner = {
+            has_country_flag = auto_cheating
+        }
+        has_owner_religion = no
+        is_core = ROOT
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            owner = {
+                every_owned_province = {
+                    limit = {
+                        has_owner_religion = no
+                        is_core = ROOT
+                    }
+                    change_religion = ROOT
+                }
+            }
+        }
+    }
+    
+    option = {
+        name = auto_cheat.17.a
+    }
 }
 
 # Convert to culture event
 province_event = {
-	id = auto_cheat.18
-	title = auto_cheat.18.title
-	desc = auto_cheat.18.desc
-	picture = CULTURE_eventPicture
-	
-	trigger = {
-		owner = {
-			has_country_flag = auto_cheating
-		}
-		has_owner_culture = no
-		is_core = ROOT
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			owner = {
-				every_owned_province = {
-					limit = {
-						has_owner_culture = no
-						is_core = ROOT
-					}
-					change_culture = owner
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = auto_cheat.18.a
-	}
+    id = auto_cheat.18
+    title = auto_cheat.18.title
+    desc = auto_cheat.18.desc
+    picture = CULTURE_eventPicture
+    
+    trigger = {
+        owner = {
+            has_country_flag = auto_cheating
+        }
+        has_owner_culture = no
+        is_core = ROOT
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            owner = {
+                every_owned_province = {
+                    limit = {
+                        has_owner_culture = no
+                        is_core = ROOT
+                    }
+                    change_culture = owner
+                }
+            }
+        }
+    }
+    
+    option = {
+        name = auto_cheat.18.a
+    }
 }
 
 # Diplomatic rep boost event
 country_event = {
-	id = auto_cheat.19
-	title = auto_cheat.19.title
-	desc = auto_cheat.19.desc
-	picture = DIPLOMACY_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		NOT = {
-			has_country_flag = cheat_diplomatic_rep_boost_used
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		add_country_modifier = {
-			name = "cheat_diplomatic_rep_modifier"
-			duration = -1
-		}
-		set_country_flag = cheat_diplomatic_rep_boost_used
-	}
-	
-	option = {
-		name = auto_cheat.19.a
-	}
+    id = auto_cheat.19
+    title = auto_cheat.19.title
+    desc = auto_cheat.19.desc
+    picture = DIPLOMACY_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        NOT = {
+            has_country_flag = cheat_diplomatic_rep_boost_used
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        add_country_modifier = {
+            name = "cheat_diplomatic_rep_modifier"
+            duration = -1
+        }
+        set_country_flag = cheat_diplomatic_rep_boost_used
+    }
+    
+    option = {
+        name = auto_cheat.19.a
+    }
 }
 
 # Religion Change event (manual, triggered from decision)
 country_event = {
-	id = auto_cheat.20
-	title = auto_cheat.20.title
-	desc = auto_cheat.20.desc
-	picture = RELIGIOUS_CONVERSION_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = auto_cheat.20.a
-		
-		change_religion = catholic
-	}
-	
-	option = {
-		name = auto_cheat.20.b
-		
-		change_religion = protestant
-	}
-	
-	option = {
-		name = auto_cheat.20.c
-		
-		change_religion = reformed
-	}
-	
-	option = {
-		name = auto_cheat.20.d
-		
-		change_religion = orthodox
-	}
-	
-	option = {
-		name = auto_cheat.20.e
-		
-		change_religion = coptic
-	}
-	
-	option = {
-		name = auto_cheat.20.f
-		
-		change_religion = sunni
-	}
-	
-	option = {
-		name = auto_cheat.20.g
-		
-		change_religion = shiite
-	}
-	
-	option = {
-		name = auto_cheat.20.h
-		
-		change_religion = ibadi
-	}
-	
-	option = {
-		name = auto_cheat.20.i
-		
-		change_religion = buddhism
-	}
-	
-	option = {
-		name = auto_cheat.20.i2
-		
-		change_religion = vajrayana
-	}
-	
-	option = {
-		name = auto_cheat.20.i3
-		
-		change_religion = mahayana
-	}
-	
-	option = {
-		name = auto_cheat.20.j
-		
-		change_religion = confucianism
-	}
-	
-	option = {
-		name = auto_cheat.20.k
-		
-		change_religion = shinto
-	}
-	
-	option = {
-		name = auto_cheat.20.l
-		
-		change_religion = hinduism
-	}
-	
-	option = {
-		name = auto_cheat.20.m
-		
-		change_religion = sikhism
-	}
-	
-	option = {
-		name = auto_cheat.20.n
-		
-		change_religion = animism
-	}
-	
-	option = {
-		name = auto_cheat.20.o
-		
-		change_religion = shamanism
-	}
-	
-	option = {
-		name = auto_cheat.20.p
-		
-		change_religion = totemism
-	}
-	
-	option = {
-		name = auto_cheat.20.q
-		
-		change_religion = inti
-	}
-	
-	option = {
-		name = auto_cheat.20.r
-		
-		change_religion = nahuatl
-	}
-	
-	option = {
-		name = auto_cheat.20.s
-		
-		change_religion = mesoamerican_religion
-	}
-	
-	option = {
-		name = auto_cheat.20.t
-		
-		change_religion = norse_pagan_reformed
-	}
-	
-	option = {
-		name = auto_cheat.20.u
-		
-		change_religion = tengri_pagan_reformed
-	}
-	
-	option = {
-		name = auto_cheat.20.v
-		
-		change_religion = jewish
-	}
-	
-	option = {
-		name = auto_cheat.20.w
-		
-		change_religion = zoroastrian
-	}
+    id = auto_cheat.20
+    title = auto_cheat.20.title
+    desc = auto_cheat.20.desc
+    picture = RELIGIOUS_CONVERSION_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = auto_cheat.20.a
+        
+        change_religion = catholic
+    }
+    
+    option = {
+        name = auto_cheat.20.b
+        
+        change_religion = protestant
+    }
+    
+    option = {
+        name = auto_cheat.20.c
+        
+        change_religion = reformed
+    }
+    
+    option = {
+        name = auto_cheat.20.d
+        
+        change_religion = orthodox
+    }
+    
+    option = {
+        name = auto_cheat.20.e
+        
+        change_religion = coptic
+    }
+    
+    option = {
+        name = auto_cheat.20.f
+        
+        change_religion = sunni
+    }
+    
+    option = {
+        name = auto_cheat.20.g
+        
+        change_religion = shiite
+    }
+    
+    option = {
+        name = auto_cheat.20.h
+        
+        change_religion = ibadi
+    }
+    
+    option = {
+        name = auto_cheat.20.i
+        
+        change_religion = buddhism
+    }
+    
+    option = {
+        name = auto_cheat.20.i2
+        
+        change_religion = vajrayana
+    }
+    
+    option = {
+        name = auto_cheat.20.i3
+        
+        change_religion = mahayana
+    }
+    
+    option = {
+        name = auto_cheat.20.j
+        
+        change_religion = confucianism
+    }
+    
+    option = {
+        name = auto_cheat.20.k
+        
+        change_religion = shinto
+    }
+    
+    option = {
+        name = auto_cheat.20.l
+        
+        change_religion = hinduism
+    }
+    
+    option = {
+        name = auto_cheat.20.m
+        
+        change_religion = sikhism
+    }
+    
+    option = {
+        name = auto_cheat.20.n
+        
+        change_religion = animism
+    }
+    
+    option = {
+        name = auto_cheat.20.o
+        
+        change_religion = shamanism
+    }
+    
+    option = {
+        name = auto_cheat.20.p
+        
+        change_religion = totemism
+    }
+    
+    option = {
+        name = auto_cheat.20.q
+        
+        change_religion = inti
+    }
+    
+    option = {
+        name = auto_cheat.20.r
+        
+        change_religion = nahuatl
+    }
+    
+    option = {
+        name = auto_cheat.20.s
+        
+        change_religion = mesoamerican_religion
+    }
+    
+    option = {
+        name = auto_cheat.20.t
+        
+        change_religion = norse_pagan_reformed
+    }
+    
+    option = {
+        name = auto_cheat.20.u
+        
+        change_religion = tengri_pagan_reformed
+    }
+    
+    option = {
+        name = auto_cheat.20.v
+        
+        change_religion = jewish
+    }
+    
+    option = {
+        name = auto_cheat.20.w
+        
+        change_religion = zoroastrian
+    }
 }
 
 # Government Rank Change event (manual, triggered from decision)
 country_event = {
-	id = auto_cheat.21
-	title = auto_cheat.21.title
-	desc = auto_cheat.21.desc
-	picture = GOOD_WITH_MONARCH_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = auto_cheat.21.a
-		
-		set_government_rank = 1
-	}
-	
-	option = {
-		name = auto_cheat.21.b
-		
-		set_government_rank = 2
-	}
-	
-	option = {
-		name = auto_cheat.21.c
-		
-		set_government_rank = 3
-	}
+    id = auto_cheat.21
+    title = auto_cheat.21.title
+    desc = auto_cheat.21.desc
+    picture = GOOD_WITH_MONARCH_eventPicture
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = auto_cheat.21.a
+        
+        set_government_rank = 1
+    }
+    
+    option = {
+        name = auto_cheat.21.b
+        
+        set_government_rank = 2
+    }
+    
+    option = {
+        name = auto_cheat.21.c
+        
+        set_government_rank = 3
+    }
 }
 
 # Combat effectiveness boost event
 country_event = {
-	id = auto_cheat.22
-	title = auto_cheat.22.title
-	desc = auto_cheat.22.desc
-	picture = LAND_MILITARY_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		NOT = {
-			has_country_flag = cheat_combat_effectiveness_boost_used
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		add_country_modifier = {
-			name = "cheat_combat_effectiveness_modifier"
-			duration = -1
-		}
-		set_country_flag = cheat_combat_effectiveness_boost_used
-	}
-	
-	option = {
-		name = auto_cheat.22.a
-	}
+    id = auto_cheat.22
+    title = auto_cheat.22.title
+    desc = auto_cheat.22.desc
+    picture = LAND_MILITARY_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        NOT = {
+            has_country_flag = cheat_combat_effectiveness_boost_used
+        }
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        add_country_modifier = {
+            name = "cheat_combat_effectiveness_modifier"
+            duration = -1
+        }
+        set_country_flag = cheat_combat_effectiveness_boost_used
+    }
+    
+    option = {
+        name = auto_cheat.22.a
+    }
 }
 
 # Provincial Development event
 province_event = {
-	id = auto_cheat.23
-	title = auto_cheat.23.title
-	desc = auto_cheat.23.desc
-	picture = CITY_DEVELOPMENT_eventPicture
-	
-	trigger = {
-		owner = {
-			has_country_flag = auto_cheating
-		}
-		NOT = {
-			has_province_flag = cheat_provincial_development_used
-		}
-		is_core = ROOT
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			owner = {
-				every_owned_province = {
-					limit = {
-						NOT = {
-							has_province_flag = cheat_provincial_development_used
-						}
-						is_core = ROOT
-					}
-					add_province_modifier = {
-						name = "cheat_provincial_development_modifier"
-						duration = -1
-					}
-					set_province_flag = cheat_provincial_development_used
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = auto_cheat.23.a
-	}
+    id = auto_cheat.23
+    title = auto_cheat.23.title
+    desc = auto_cheat.23.desc
+    picture = CITY_DEVELOPMENT_eventPicture
+    
+    trigger = {
+        owner = {
+            has_country_flag = auto_cheating
+        }
+        NOT = {
+            has_province_flag = cheat_provincial_development_used
+        }
+        is_core = ROOT
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            owner = {
+                every_owned_province = {
+                    limit = {
+                        NOT = {
+                            has_province_flag = cheat_provincial_development_used
+                        }
+                        is_core = ROOT
+                    }
+                    add_province_modifier = {
+                        name = "cheat_provincial_development_modifier"
+                        duration = -1
+                    }
+                    set_province_flag = cheat_provincial_development_used
+                }
+            }
+        }
+    }
+    
+    option = {
+        name = auto_cheat.23.a
+    }
 }
 
 # Add colonists event
 country_event = {
-	id = auto_cheat.24
-	title = auto_cheat.24.title
-	desc = auto_cheat.24.desc
-	picture = COLONIZATION_eventPicture
-	
-	trigger = {
-		has_country_flag = auto_cheating
-		NOT = {
-			has_country_flag = cheat_add_colonists_used
-		}
-		has_idea = quest_for_the_new_world
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		add_country_modifier = {
-			name = "cheat_colonists_modifier"
-			duration = -1
-		}
-		set_country_flag = cheat_add_colonists_used
-	}
-	
-	option = {
-		name = auto_cheat.24.a
-	}
+    id = auto_cheat.24
+    title = auto_cheat.24.title
+    desc = auto_cheat.24.desc
+    picture = COLONIZATION_eventPicture
+    
+    trigger = {
+        has_country_flag = auto_cheating
+        NOT = {
+            has_country_flag = cheat_add_colonists_used
+        }
+        has_idea = quest_for_the_new_world
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    immediate = {
+        add_country_modifier = {
+            name = "cheat_colonists_modifier"
+            duration = -1
+        }
+        set_country_flag = cheat_add_colonists_used
+    }
+    
+    option = {
+        name = auto_cheat.24.a
+    }
 }

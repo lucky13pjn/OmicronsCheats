@@ -1,468 +1,468 @@
 country_decisions = {
-	cheat_auto_cheating_enable = {
-		major = yes
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-			}
-		}
-		allow = { }
-		effect = {
-			set_country_flag = auto_cheating
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_auto_cheating_disable = {
-		major = yes
-		potential = {
-			has_country_flag = auto_cheating
-		}
-		allow = { }
-		effect = {
-			clr_country_flag = auto_cheating
-			clr_country_flag = auto_cheating_colonies
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_auto_cheating_colonies_enable = {
-		major = yes
-		potential = {
-			has_country_flag = auto_cheating
-			NOT = {
-				has_country_flag = auto_cheating_colonies
-			}
-		}
-		allow = { }
-		effect = {
-			set_country_flag = auto_cheating_colonies
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_auto_cheating_colonies_disable = {
-		major = yes
-		potential = {
-			has_country_flag = auto_cheating
-			has_country_flag = auto_cheating_colonies
-		}
-		allow = { }
-		effect = {
-			clr_country_flag = auto_cheating_colonies
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
+    cheat_auto_cheating_enable = {
+        major = yes
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+            }
+        }
+        allow = { }
+        effect = {
+            set_country_flag = auto_cheating
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_auto_cheating_disable = {
+        major = yes
+        potential = {
+            has_country_flag = auto_cheating
+        }
+        allow = { }
+        effect = {
+            clr_country_flag = auto_cheating
+            clr_country_flag = auto_cheating_colonies
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_auto_cheating_colonies_enable = {
+        major = yes
+        potential = {
+            has_country_flag = auto_cheating
+            NOT = {
+                has_country_flag = auto_cheating_colonies
+            }
+        }
+        allow = { }
+        effect = {
+            set_country_flag = auto_cheating_colonies
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_auto_cheating_colonies_disable = {
+        major = yes
+        potential = {
+            has_country_flag = auto_cheating
+            has_country_flag = auto_cheating_colonies
+        }
+        allow = { }
+        effect = {
+            clr_country_flag = auto_cheating_colonies
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
 
-	cheat_money = {
-		potential = {}
-		allow = { }
-		effect = {
-			add_treasury = 999999
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
+    cheat_money = {
+        potential = {}
+        allow = { }
+        effect = {
+            add_treasury = 999999
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
 
-	cheat_tech = {
-		potential = {}
-		allow = { }
-		effect = {
-			add_adm_power = 10000
-			add_dip_power = 10000
-			add_mil_power = 10000
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
+    cheat_tech = {
+        potential = {}
+        allow = { }
+        effect = {
+            add_adm_power = 10000
+            add_dip_power = 10000
+            add_mil_power = 10000
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
 
-	cheat_manpower = {
-		potential = { 
-			NOT = {
-				has_country_flag = auto_cheating
-			}
-		}
-		allow = {
-			NOT = {
-				manpower = 4000
-			}
-		}
-		effect = {
-			add_manpower = 1000
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_forcelimit = {
-		major = yes
-		potential = {
-			NOT = {
-				has_country_flag = cheat_forcelimit_used
-				has_country_flag = auto_cheating
-			}
-		}
-		allow = { }
-		effect = {
-			add_country_modifier = {
-				name = "cheat_forcelimit_modifier"
-				duration = -1
-			}
-			set_country_flag = cheat_forcelimit_used
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_westernize = {
-		major = yes
-		potential = {
-			NOT = {
-				technology_group = western
-				has_country_flag = auto_cheating
-			}
-		}
-		allow = { }
-		effect = {
-			country_event = {
-				id = "auto_cheat.14"
-				days = 1
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_tech_research = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-				has_country_flag = cheat_tech_research_used
-			}
-		}
-		allow = { }
-		effect = {
-			add_country_modifier = {
-				name = "cheat_tech_research_modifier"
-				duration = -1
-			}
-			set_country_flag = cheat_tech_research_used
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_recruit_time = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-			}
-		}
-		allow = { }
-		effect = {
-			every_core_province = {
-				limit = {
-					owned_by = ROOT
-					NOT = {
-						has_province_flag = cheat_recruit_time_used
-					}
-				}
-				add_province_modifier = {
-					name = "cheat_recruit_time_modifier"
-					duration = -1
-				}
-				set_province_flag = cheat_recruit_time_used
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_build_everything = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-			}
-		}
-		allow = { }
-		effect = {
-			every_owned_province = {
-				# Manufactories
-				if = {
-					limit = {
-						OR = {
-							NOT = { has_building = tradecompany }
-							NOT = { has_building = plantations }
-							NOT = { has_building = textile }
-							NOT = { has_building = weapons }
-							NOT = { has_building = wharf }
-						}
-					}
-					add_building = tradecompany
-					add_building = plantations
-					add_building = textile
-					add_building = weapons
-					add_building = wharf
-				}
-				
-				# Government buildings
-				add_building = town_hall
-				add_building = university
-				
-				# Army buildings
-				add_building = training_fields
-				add_building = conscription_center
-				
-				# Navy buildings
-				add_building = grand_shipyard
-				add_building = drydock
-				
-				# Production buildings
-				add_building = counting_house
-				
-				# Trade buildings
-				add_building = stock_exchange
-				
-				# Taxation buildings
-				add_building = cathedral
-				
-				# Fort buildings
-				add_building = fort_18th
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_government_change = {
-		potential = {}
-		allow = {
-			is_colonial_nation = no
-		}
-		effect = {
-			country_event = {
-				id = "auto_cheat.9"
-				days = 1
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_add_envoys = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-				has_country_flag = cheat_add_envoys_used
-			}
-		}
-		allow = {}
-		effect = {
-			add_country_modifier = {
-				name = "cheat_envoys_modifier"
-				duration = -1
-			}
-			set_country_flag = cheat_add_envoys_used
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_add_colonists = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-				has_country_flag = cheat_add_colonists_used
-			}
-		}
-		allow = {
-			has_idea = quest_for_the_new_world
-		}
-		effect = {
-			add_country_modifier = {
-				name = "cheat_colonists_modifier"
-				duration = -1
-			}
-			set_country_flag = cheat_add_colonists_used
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_add_cores = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-			}
-		}
-		allow = { }
-		effect = {
-			every_owned_province = {
-				limit = {
-					NOT = { is_core = ROOT }
-					is_colony = no
-				}
-				add_core = ROOT
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_convert_provinces_to_religion = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-			}
-		}
-		allow = { }
-		effect = {
-			every_owned_province = {
-				limit = {
-					has_owner_religion = no
-					is_core = ROOT
-				}
-				change_religion = ROOT
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_convert_provinces_to_culture = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-			}
-		}
-		allow = { }
-		effect = {
-			every_owned_province = {
-				limit = {
-					has_owner_culture = no
-					is_core = ROOT
-				}
-				change_culture = ROOT
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_diplomatic_rep_boost = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-				has_country_flag = cheat_diplomatic_rep_boost_used
-			}
-		}
-		allow = {}
-		effect = {
-			add_country_modifier = {
-				name = "cheat_diplomatic_rep_modifier"
-				duration = -1
-			}
-			set_country_flag = cheat_diplomatic_rep_boost_used
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_religion_change = {
-		potential = {}
-		allow = {}
-		effect = {
-			country_event = {
-				id = "auto_cheat.20"
-				days = 1
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_combat_effectiveness_boost = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-				has_country_flag = cheat_combat_effectiveness_boost_used
-			}
-		}
-		allow = { }
-		effect = {
-			add_country_modifier = {
-				name = "cheat_combat_effectiveness_modifier"
-				duration = -1
-			}
-			set_country_flag = cheat_combat_effectiveness_boost_used
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_government_rank_change = {
-		potential = {}
-		allow = {}
-		effect = {
-			country_event = {
-				id = "auto_cheat.21"
-				days = 1
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	cheat_provincial_development = {
-		potential = {
-			NOT = {
-				has_country_flag = auto_cheating
-			}
-		}
-		allow = { }
-		effect = {
-			every_core_province = {
-				limit = {
-					owned_by = ROOT
-					NOT = {
-						has_province_flag = cheat_provincial_development_used
-					}
-				}
-				add_province_modifier = {
-					name = "cheat_provincial_development_modifier"
-					duration = -1
-				}
-				set_province_flag = cheat_provincial_development_used
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
+    cheat_manpower = {
+        potential = { 
+            NOT = {
+                has_country_flag = auto_cheating
+            }
+        }
+        allow = {
+            NOT = {
+                manpower = 4000
+            }
+        }
+        effect = {
+            add_manpower = 1000
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_forcelimit = {
+        major = yes
+        potential = {
+            NOT = {
+                has_country_flag = cheat_forcelimit_used
+                has_country_flag = auto_cheating
+            }
+        }
+        allow = { }
+        effect = {
+            add_country_modifier = {
+                name = "cheat_forcelimit_modifier"
+                duration = -1
+            }
+            set_country_flag = cheat_forcelimit_used
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_westernize = {
+        major = yes
+        potential = {
+            NOT = {
+                technology_group = western
+                has_country_flag = auto_cheating
+            }
+        }
+        allow = { }
+        effect = {
+            country_event = {
+                id = "auto_cheat.14"
+                days = 1
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_tech_research = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+                has_country_flag = cheat_tech_research_used
+            }
+        }
+        allow = { }
+        effect = {
+            add_country_modifier = {
+                name = "cheat_tech_research_modifier"
+                duration = -1
+            }
+            set_country_flag = cheat_tech_research_used
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_recruit_time = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+            }
+        }
+        allow = { }
+        effect = {
+            every_core_province = {
+                limit = {
+                    owned_by = ROOT
+                    NOT = {
+                        has_province_flag = cheat_recruit_time_used
+                    }
+                }
+                add_province_modifier = {
+                    name = "cheat_recruit_time_modifier"
+                    duration = -1
+                }
+                set_province_flag = cheat_recruit_time_used
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_build_everything = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+            }
+        }
+        allow = { }
+        effect = {
+            every_owned_province = {
+                # Manufactories
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { has_building = tradecompany }
+                            NOT = { has_building = plantations }
+                            NOT = { has_building = textile }
+                            NOT = { has_building = weapons }
+                            NOT = { has_building = wharf }
+                        }
+                    }
+                    add_building = tradecompany
+                    add_building = plantations
+                    add_building = textile
+                    add_building = weapons
+                    add_building = wharf
+                }
+                
+                # Government buildings
+                add_building = town_hall
+                add_building = university
+                
+                # Army buildings
+                add_building = training_fields
+                add_building = conscription_center
+                
+                # Navy buildings
+                add_building = grand_shipyard
+                add_building = drydock
+                
+                # Production buildings
+                add_building = counting_house
+                
+                # Trade buildings
+                add_building = stock_exchange
+                
+                # Taxation buildings
+                add_building = cathedral
+                
+                # Fort buildings
+                add_building = fort_18th
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_government_change = {
+        potential = {}
+        allow = {
+            is_colonial_nation = no
+        }
+        effect = {
+            country_event = {
+                id = "auto_cheat.9"
+                days = 1
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_add_envoys = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+                has_country_flag = cheat_add_envoys_used
+            }
+        }
+        allow = {}
+        effect = {
+            add_country_modifier = {
+                name = "cheat_envoys_modifier"
+                duration = -1
+            }
+            set_country_flag = cheat_add_envoys_used
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_add_colonists = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+                has_country_flag = cheat_add_colonists_used
+            }
+        }
+        allow = {
+            has_idea = quest_for_the_new_world
+        }
+        effect = {
+            add_country_modifier = {
+                name = "cheat_colonists_modifier"
+                duration = -1
+            }
+            set_country_flag = cheat_add_colonists_used
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_add_cores = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+            }
+        }
+        allow = { }
+        effect = {
+            every_owned_province = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    is_colony = no
+                }
+                add_core = ROOT
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_convert_provinces_to_religion = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+            }
+        }
+        allow = { }
+        effect = {
+            every_owned_province = {
+                limit = {
+                    has_owner_religion = no
+                    is_core = ROOT
+                }
+                change_religion = ROOT
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_convert_provinces_to_culture = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+            }
+        }
+        allow = { }
+        effect = {
+            every_owned_province = {
+                limit = {
+                    has_owner_culture = no
+                    is_core = ROOT
+                }
+                change_culture = ROOT
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_diplomatic_rep_boost = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+                has_country_flag = cheat_diplomatic_rep_boost_used
+            }
+        }
+        allow = {}
+        effect = {
+            add_country_modifier = {
+                name = "cheat_diplomatic_rep_modifier"
+                duration = -1
+            }
+            set_country_flag = cheat_diplomatic_rep_boost_used
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_religion_change = {
+        potential = {}
+        allow = {}
+        effect = {
+            country_event = {
+                id = "auto_cheat.20"
+                days = 1
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_combat_effectiveness_boost = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+                has_country_flag = cheat_combat_effectiveness_boost_used
+            }
+        }
+        allow = { }
+        effect = {
+            add_country_modifier = {
+                name = "cheat_combat_effectiveness_modifier"
+                duration = -1
+            }
+            set_country_flag = cheat_combat_effectiveness_boost_used
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_government_rank_change = {
+        potential = {}
+        allow = {}
+        effect = {
+            country_event = {
+                id = "auto_cheat.21"
+                days = 1
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    cheat_provincial_development = {
+        potential = {
+            NOT = {
+                has_country_flag = auto_cheating
+            }
+        }
+        allow = { }
+        effect = {
+            every_core_province = {
+                limit = {
+                    owned_by = ROOT
+                    NOT = {
+                        has_province_flag = cheat_provincial_development_used
+                    }
+                }
+                add_province_modifier = {
+                    name = "cheat_provincial_development_modifier"
+                    duration = -1
+                }
+                set_province_flag = cheat_provincial_development_used
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
 }
