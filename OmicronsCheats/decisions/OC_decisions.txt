@@ -178,14 +178,13 @@ country_decisions = {
                 limit = {
                     owned_by = ROOT
                     NOT = {
-                        has_province_flag = cheat_recruit_time_used
+                        has_province_modifier = cheat_recruit_time_modifier
                     }
                 }
                 add_province_modifier = {
                     name = "cheat_recruit_time_modifier"
                     duration = -1
                 }
-                set_province_flag = cheat_recruit_time_used
             }
         }
         ai_will_do = {
@@ -451,14 +450,13 @@ country_decisions = {
                 limit = {
                     owned_by = ROOT
                     NOT = {
-                        has_province_flag = cheat_provincial_development_used
+                        has_province_modifier = cheat_provincial_development_modifier
                     }
                 }
                 add_province_modifier = {
                     name = "cheat_provincial_development_modifier"
                     duration = -1
                 }
-                set_province_flag = cheat_provincial_development_used
             }
         }
         ai_will_do = {

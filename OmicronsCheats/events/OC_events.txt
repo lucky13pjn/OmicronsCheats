@@ -201,7 +201,7 @@ province_event = {
             has_country_flag = auto_cheating
         }
         NOT = {
-            has_province_flag = cheat_recruit_time_used
+            has_province_modifier = cheat_recruit_time_modifier
         }
         is_core = ROOT
     }
@@ -216,7 +216,7 @@ province_event = {
                 every_owned_province = {
                     limit = {
                         NOT = {
-                            has_province_flag = cheat_recruit_time_used
+                            has_province_modifier = cheat_recruit_time_modifier
                         }
                         is_core = ROOT
                     }
@@ -224,7 +224,6 @@ province_event = {
                         name = "cheat_recruit_time_modifier"
                         duration = -1
                     }
-                    set_province_flag = cheat_recruit_time_used
                 }
             }
         }
@@ -1100,7 +1099,7 @@ province_event = {
             has_country_flag = auto_cheating
         }
         NOT = {
-            has_province_flag = cheat_provincial_development_used
+            has_province_modifier = cheat_provincial_development_modifier
         }
         is_core = ROOT
     }
@@ -1115,7 +1114,7 @@ province_event = {
                 every_owned_province = {
                     limit = {
                         NOT = {
-                            has_province_flag = cheat_provincial_development_used
+                            has_province_modifier = cheat_provincial_development_modifier
                         }
                         is_core = ROOT
                     }
@@ -1123,7 +1122,6 @@ province_event = {
                         name = "cheat_provincial_development_modifier"
                         duration = -1
                     }
-                    set_province_flag = cheat_provincial_development_used
                 }
             }
         }
