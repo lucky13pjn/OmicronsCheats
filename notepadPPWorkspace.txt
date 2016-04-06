@@ -1,0 +1,22 @@
+<NotepadPlus>
+    <Project name="Omicron&apos;s Cheats">
+        <Folder name="common">
+            <Folder name="defines">
+                <File name="OmicronsCheats\common\defines\OC_defines.lua" />
+            </Folder>
+            <Folder name="event_modifiers">
+                <File name="OmicronsCheats\common\event_modifiers\OC_event_modifiers.txt" />
+            </Folder>
+        </Folder>
+        <Folder name="decisions">
+            <File name="OmicronsCheats\decisions\OC_decisions.txt" />
+        </Folder>
+        <Folder name="events">
+            <File name="OmicronsCheats\events\OC_events.txt" />
+        </Folder>
+        <Folder name="localisation">
+            <File name="OmicronsCheats\localisation\OC_l_english.yml" />
+            <File name="OmicronsCheats\localisation\OC_l_russian.yml" />
+        </Folder>
+    </Project>
+</NotepadPlus>
