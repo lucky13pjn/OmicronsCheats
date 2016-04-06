@@ -4,6 +4,9 @@ country_decisions = {
         potential = {
             NOT = {
                 has_country_flag = auto_cheating
+                
+                # Disable automatic cheating for 1.16 as it crashes the game.
+                ai = no
             }
         }
         allow = { }
